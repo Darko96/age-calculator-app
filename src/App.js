@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="age-calculator-app">
+      <div className="container">
+        <form className="date-box">
+          <label>Day</label>
+          <input type="number" min={0} max={21} />
+          <label>Month</label>
+          <input type="number" min={0} max={12} />
+          <label>Year</label>
+          <input type="number" min={0} max={2024} />
+        </form>
+      </div>
+      <div className="button-box">
+        <hr />
+      </div>
+      <div className="result-box">
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <span>38</span>years
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          <span>3</span>months
+        </p>
+        <p>
+          <span>26</span>days
+        </p>
+      </div>
     </div>
   );
 }
