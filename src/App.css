@@ -1,10 +1,10 @@
 :root {
   --purple: hsl(259, 100%, 65%);
   --light: red: hsl(0, 100%, 67%);
-  --white: hsl(0, 0%, 100%);
-  --off-white: hsl(0, 0%, 94%);
-  --light-grey: hsl(0, 0%, 86%);
-  --smokey-grey: hsl(0, 1%, 44%);
+  --white: #ffffff;
+  --off-white: #f0f0f0;
+  --light-grey: #dbdbdb;
+  --smokey-grey: #716f6f;
   --off-black: hsl(0, 0%, 8%);
 }
 
@@ -12,6 +12,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 html {
@@ -32,18 +38,95 @@ img {
 
 .age-calculator-app {
   width: 80%;
+  height: 100vh;
   max-width: 84rem;
-  margin: 0 auto;
-
-  background-color: var(--white);
-
+  margin: 0 auto;  
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  padding: 5.6rem;
-  border-radius: 2.4rem 2.4rem 20rem 2.4rem;
+  align-items: center;
 }
 
-.container{}
+.container{
+  background-color: var(--white);
+  padding: 5.6rem;
+  border-radius: 2.4rem 2.4rem 20rem 2.4rem;
+  
+}
+
+.date-container {
+  display: flex;
+  gap: 3.2rem;
+  margin-bottom: 4.7rem;
+}
+
+.date-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-box label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: var(--smokey-grey);
+}
+
+.date-box input {
+  max-width: 16rem;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(#DCDCDC);
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  opacity: 0.5;
+  color: var(--off-black);
+  
+}
+
+.date-box input:hover, input:active {
+  cursor: pointer;
+  border: 0.2rem solid var(--purple);
+}
+
+.line {
+  height: 0.1rem;
+  width: 100%;
+  background-color: #DCDCDC;
+  align-self: center;
+}
+
+.result-text {
+  font-size: 10.4rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 110%;
+  letter-spacing: -0.2rem;
+  color: var(--off-black);
+}
+
+.result-text span {
+  font-size: 10.4rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 110%;
+  letter-spacing: -0.2rem;
+  color: var(--purple);
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 9.6rem;
+  height: 9.6rem;
+  border-radius: 21.6rem;
+  background: var(--Purple, #854DFF);
+  border: 0;
+}
